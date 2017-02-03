@@ -3,7 +3,7 @@ sudo: required
 services:
   - docker
 
-before_install:
+script:
   - docker build -t gcartifactory-us.jfrog.info:5005/artifactory-alpine:$TRAVIS_BUILD_NUMBER .
 
 after_success:
