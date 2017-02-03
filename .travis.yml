@@ -8,4 +8,4 @@ script:
 
 after_success:
   - docker login -e $ARTIFACTORY_EMAIL -u $ARTIFACTORY_USERNAME -p $ARTIFACTORY_PASSWORD gcartifactory-us.jfrog.info:5005
-  - docker push $ARTIFACTORY_DOCKER_REPOSITORY/artifactory-alpine:$TRAVIS_BUILD_NUMBER
+  - docker push gcartifactory-us.jfrog.info:5005/artifactory-alpine:$TRAVIS_BUILD_NUMBER
