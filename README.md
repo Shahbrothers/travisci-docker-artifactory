@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/Shahbrothers/travisci-docker-artifactory.svg?branch=master)](https://travis-ci.org/Shahbrothers/travisci-docker-artifactory)
 
-`To make this integration work you will need to have running Artifactory-pro/Artifactory SAAS/Artifactory Enterprise which is acccessible form outside with reverse proxy setting.`
+`To make this integration work you will need to have running Artifactory-pro/Artifactory SAAS.`
 
 ### Steps to build docker images using Circle CI and push it to Artifactory.
 
