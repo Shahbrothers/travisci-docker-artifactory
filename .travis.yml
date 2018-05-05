@@ -17,7 +17,7 @@ script:
 
 after_success:
   # Login to Artifactory docker registry
-  - docker login -e $ARTIFACTORY_EMAIL -u $ARTIFACTORY_USER -p $ARTIFACTORY_PASSWORD $ARTIFACTORY_DOCKER_REPOSITORY
+  - docker login -u $ARTIFACTORY_USER -p $ARTIFACTORY_PASSWORD $ARTIFACTORY_DOCKER_REPOSITORY
   # Push docker image to Artifactory using JFrog CLI
   - ./jfrog rt dp $ARTIFACTORY_DOCKER_REPOSITORY/node-version:$TRAVIS_BUILD_NUMBER docker-dev --build-name=travisci-docker-artifactory --build-number=$TRAVIS_BUILD_NUMBER
   # Capture environment variables and append it to build information
